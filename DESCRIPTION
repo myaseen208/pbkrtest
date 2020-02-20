@@ -4,8 +4,8 @@ Title: Parametric Bootstrap and Kenward Roger Based Methods for Mixed Model
     Comparison
 Version: 0.4-8
 Authors@R: c(
-              person(c("Ulrich", "Halekoh"),  email = "uhalekoh@health.sdu.dk", role = c("aut", "cre"))
-            , person(c("Søren",  "Højsgaard"),  email = "sorenh@math.aau.dk", role = c("aut", "ctb"))
+              person(c("Ulrich", "Halekoh"),  email = "uhalekoh@health.sdu.dk", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-3679-8424"))
+            , person(c("Søren",  "Højsgaard"),  email = "sorenh@math.aau.dk", role = c("aut", "ctb"), comment = c(ORCID = "0000-0002-3269-9552"))
             )
 Maintainer: Søren Højsgaard <sorenh@math.aau.dk>
 Description: Test in mixed effects models. Attention is on mixed effects models

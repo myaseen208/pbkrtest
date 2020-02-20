@@ -107,61 +107,54 @@
       </header><div class="row">
   <div class="contents col-md-9">
 
-<hr>
-<div id="output-rmarkdowngithub_document" class="section level2">
-<h2 class="hasAnchor">
-<a href="#output-rmarkdowngithub_document" class="anchor"></a>output: rmarkdown::github_document</h2>
-<p><code>{r, echo = FALSE} knitr::opts_chunk$set(   collapse = TRUE,   comment = "",   fig.path = "inst/extdata/"   , warning = FALSE )</code></p>
-</div>
 <div id="pbkrtest-parametric-bootstrap-and-kenward-roger-based-methods-for-mixed-model-comparison" class="section level2">
 <h2 class="hasAnchor">
 <a href="#pbkrtest-parametric-bootstrap-and-kenward-roger-based-methods-for-mixed-model-comparison" class="anchor"></a><code>pbkrtest</code>: Parametric Bootstrap and Kenward Roger Based Methods for Mixed Model Comparison</h2>
-<p><code>{r,echo = FALSE, message = FALSE} devtools::load_all(".")</code></p>
-<div id="version--r-getnamespaceversionpbkrtest-copyright-c-2019-2020-license-gpl-2gpl-3" class="section level6">
-<h6>Version : <a href="https://myaseen208.github.io/pbkrtest/"><code>r getNamespaceVersion("pbkrtest")</code></a>; Copyright (C) 2019-2020:; License: <a href="https://www.r-project.org/Licenses/">GPL-2|GPL-3</a>
+<div id="version--048-copyright-c-2017-2020-license-gpl-2gpl-3" class="section level6">
+<h6>Version : <a href="https://myaseen208.github.io/pbkrtest/">0.4.8</a>; Copyright (C) 2017-2020:; License: <a href="https://www.r-project.org/Licenses/">GPL-2|GPL-3</a>
 </h6>
 </div>
-<div id="rodney-edmondson1-hans-peter-piepho2-and-muhammad-yaseen3" class="section level5">
+<div id="ulrich-halekoh1-and-søren-højsgaard2" class="section level5">
 <h5 class="hasAnchor">
-<a href="#rodney-edmondson1-hans-peter-piepho2-and-muhammad-yaseen3" class="anchor"></a><em>Rodney Edmondson</em>^1^, <em>Hans-Peter Piepho</em>^2^ and <em>Muhammad Yaseen</em>^3^</h5>
+<a href="#ulrich-halekoh1-and-s%C3%B8ren-h%C3%B8jsgaard2" class="anchor"></a><em>Ulrich Halekoh</em><sup>1</sup> and <em>Søren Højsgaard</em><sup>2</sup>
+</h5>
 <ol>
-<li>Rana House, Wellesbourne, UK (<a href="mailto:rodney.edmondson@gmail.com" class="email">rodney.edmondson@gmail.com</a>)</li>
-<li>Biostatistics Unit, Institute of Crop Science, University of Hohenheim, Stuttgart, Germany (<a href="mailto:piepho@uni-hohenheim.de" class="email">piepho@uni-hohenheim.de</a>)</li>
-<li>Department of Mathematics and Statistics, University of Agriculture Faisalabad, Pakistan (<a href="mailto:myaseen208@gmail.com" class="email">myaseen208@gmail.com</a>).</li>
+<li>Associate Professor, Department of Public Health, University of Southern Denmark, Denmark (<a href="mailto:uhalekoh@health.sdu.dk" class="email">uhalekoh@health.sdu.dk</a>)</li>
+<li>Head of Department of Mathematical Sciences and Associate Professor of statistics at Aalborg University (<a href="mailto:sorenh@math.aau.dk" class="email">sorenh@math.aau.dk</a>)</li>
 </ol>
 <hr>
-<p><a href="https://cran.r-project.org/"><img src="https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg" alt="minimal R version"></a> <a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg" alt="License: GPL v3"></a> <a href="https://cran.r-project.org/package=pbkrtest"><img src="https://www.r-pkg.org/badges/version-last-release/pbkrtest" alt="CRAN_Status_Badge"></a> <a href="https://CRAN.R-project.org/package=pbkrtest"><img src="https://cranlogs.r-pkg.org/badges/grand-total/pbkrtest?color=green" alt="rstudio mirror downloads"></a> <!-- [![packageversion](https://img.shields.io/badge/Package%20version-0.2.3.3-orange.svg)](https://github.com/myaseen208/pbkrtest) --></p>
-<p><code>{r, results='asis', echo=FALSE} dver &lt;- ifelse(test = gsub("(.\\.)(\\d+)(\\..)", "", getNamespaceVersion("pbkrtest")) != "",                yes = getNamespaceVersion("pbkrtest"),                no = gsub("Version:\\s*", "", readLines(paste0("https://raw.githubusercontent.com/", "myaseen208/pbkrtest", "/master/DESCRIPTION"))[grep("Version:", readLines(paste0("https://raw.githubusercontent.com/", "myaseen208/pbkrtest", "/master/DESCRIPTION")))])) cat(paste("[![develVersion](https://img.shields.io/badge/devel%20version-", dver, "-orange.svg)](https://github.com/myaseen208/pbkrtest)", sep = ""))</code></p>
+<p><a href="https://github.com/myaseen208/pbkrtest"><img src="https://img.shields.io/badge/devel%20version-0.4-8-orange.svg" alt="develVersion"></a></p>
 <!-- [![GitHub Download Count](https://github-basic-badges.herokuapp.com/downloads/myaseen208/pbkrtest/total.svg)] -->
-<p><a href="http://www.repostatus.org/#inactive"><img src="http://www.repostatus.org/badges/latest/inactive.svg" alt="Project Status: WIP"></a> <a href="https://www.tidyverse.org/lifecycle/#stable"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a> <a href="https://github.com/myaseen208/pbkrtest"><img src="https://img.shields.io/badge/last%20change-%60r%20gsub('-',%20'--',%20Sys.Date())%60-yellowgreen.svg" alt="Last-changedate"></a> <a href="http://www.rdocumentation.org/packages/pbkrtest"><img src="http://www.rdocumentation.org/badges/version/pbkrtest" alt="Rdoc"></a></p>
+<p><a href="http://www.repostatus.org/#inactive"><img src="http://www.repostatus.org/badges/latest/inactive.svg" alt="Project Status: WIP"></a> <a href="https://www.tidyverse.org/lifecycle/#stable"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a> <a href="https://github.com/myaseen208/pbkrtest"><img src="https://img.shields.io/badge/last%20change-2020--02--20-yellowgreen.svg" alt="Last-changedate"></a> <a href="http://www.rdocumentation.org/packages/pbkrtest"><img src="http://www.rdocumentation.org/badges/version/pbkrtest" alt="Rdoc"></a></p>
 <hr>
 </div>
 </div>
 <div id="description" class="section level2">
 <h2 class="hasAnchor">
 <a href="#description" class="anchor"></a>Description</h2>
-<p><code>r gsub("(&lt;doi:)(.+)(&gt;)", "[doi:\\2](https://doi.org/\\2)", gsub("\\n", " ", packageDescription("pbkrtest", fields = "Description")))</code></p>
+<p>Test in mixed effects models. Attention is on mixed effects models as implemented in the ‘lme4’ package. This package implements a parametric bootstrap test and a Kenward Roger modification of F-tests for linear mixed effects models and a parametric bootstrap test for generalized linear mixed models.</p>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>The package can be installed from CRAN as follows:</p>
-<p><code>{r, eval=FALSE} install.packages("pbkrtest", dependencies = TRUE)</code></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"pbkrtest"</span>, <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <p>The development version can be installed from github as follows:</p>
-<p><code>{r, eval=FALSE} if (!require("remotes")) install.packages("remotes") remotes::install_github("myaseen208/pbkrtest")</code></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span>(<span class="st">"remotes"</span>)) <span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"remotes"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a>remotes<span class="op">::</span><span class="kw"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"myaseen208/pbkrtest"</span>)</span></code></pre></div>
 </div>
 <div id="detailed-tutorial" class="section level2">
 <h2 class="hasAnchor">
 <a href="#detailed-tutorial" class="anchor"></a>Detailed tutorial</h2>
 <p>For a detailed tutorial (vignette) on how to used this package type:</p>
-<p><code>{r, eval=FALSE} browseVignettes(package = "pbkrtest")</code></p>
-<p>The vignette for the latest version is also available <a href="https://myaseen208.github.io/pbkrtest/articles/Intropbkrtest.pdf">online</a>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw"><a href="https://rdrr.io/r/utils/browseVignettes.html">browseVignettes</a></span>(<span class="dt">package =</span> <span class="st">"pbkrtest"</span>)</span></code></pre></div>
+<p>The vignette for the latest version is also available <a href="https://myaseen208.github.io/pbkrtest/articles/Intro_pbkrtest.pdf">online</a>.</p>
 </div>
 <div id="whats-new" class="section level2">
 <h2 class="hasAnchor">
 <a href="#whats-new" class="anchor"></a>What’s new</h2>
 <p>To know whats new in this version type:</p>
-<p><code>{r, eval=FALSE} news(package = "pbkrtest")</code></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw"><a href="https://rdrr.io/r/utils/news.html">news</a></span>(<span class="dt">package =</span> <span class="st">"pbkrtest"</span>)</span></code></pre></div>
 </div>
 <div id="links" class="section level2">
 <h2 class="hasAnchor">
@@ -175,44 +168,27 @@
 <a href="#citing-pbkrtest" class="anchor"></a>Citing <code>pbkrtest</code>
 </h2>
 <p>To cite the methods in the package use:</p>
-<p><code>{r, eval = FALSE} citation("pbkrtest")</code></p>
-<p>```{r, echo = FALSE} detach(“package:pbkrtest”, unload=TRUE) suppressPackageStartupMessages(library(pbkrtest)) cit &lt;- citation(“pbkrtest”)</p>
-</div>
-<div id="yr---formatsysdate-y" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#yr---formatsysdate-y" class="anchor"></a>yr &lt;- format(Sys.Date(), “%Y”)</h1></div>
-</div>
-<div id="cit1year---yr" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cit1year---yr" class="anchor"></a>cit[1]$year &lt;- yr</h1>
-</div>
-<div id="oc---classcit" class="section level1">
-<h1 class="hasAnchor">
-<a href="#oc---classcit" class="anchor"></a>oc &lt;- class(cit)</h1>
-</div>
-<div id="section" class="section level1">
-<h1></h1>
-</div>
-<div id="cit---unclasscit" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cit---unclasscit" class="anchor"></a>cit &lt;- unclass(cit)</h1>
-</div>
-<div id="attrcit1textversion---gsub" class="section level1">
-<h1 class="hasAnchor">
-<a href="#attrcit1textversion---gsub" class="anchor"></a>attr(cit[[1]],“textVersion”) &lt;- gsub(“\(\)”,</h1>
-</div>
-<div id="paste-yr--sep--" class="section level1">
-<h1 class="hasAnchor">
-<a href="#paste-yr--sep--" class="anchor"></a>paste(“\(”, yr, “\)”, sep = ""),</h1>
-</div>
-<div id="attrcit1textversion" class="section level1">
-<h1 class="hasAnchor">
-<a href="#attrcit1textversion" class="anchor"></a>attr(cit[[1]],“textVersion”))</h1>
-</div>
-<div id="classcit---oc" class="section level1">
-<h1 class="hasAnchor">
-<a href="#classcit---oc" class="anchor"></a>class(cit) &lt;- oc</h1>
-<p>cit</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span>(<span class="st">"pbkrtest"</span>)</span></code></pre></div>
+<pre><code>
+To cite pbkrtest in publications use:
+
+  Ulrich Halekoh, Søren Højsgaard (2014). A Kenward-Roger Approximation
+  and Parametric Bootstrap Methods for Tests in Linear Mixed Models -
+  The R Package pbkrtest. Journal of Statistical Software, 59(9), 1-30.
+  URL http://www.jstatsoft.org/v59/i09/.
+
+A BibTeX entry for LaTeX users is
+
+  @Article{,
+    title = {A Kenward-Roger Approximation and Parametric Bootstrap Methods for Tests in Linear Mixed Models -- The {R} Package {pbkrtest}},
+    author = {Ulrich Halekoh and S{\o}ren H{\o}jsgaard},
+    journal = {Journal of Statistical Software},
+    year = {2014},
+    volume = {59},
+    number = {9},
+    pages = {1--30},
+    url = {http://www.jstatsoft.org/v59/i09/},
+  }</code></pre>
 </div>
 
   </div>
@@ -244,8 +220,8 @@
 <div class="developers">
 <h2>Developers</h2>
 <ul class="list-unstyled">
-<li>Ulrich Halekoh <br><small class="roles"> Author, maintainer </small>  </li>
-<li>Søren Højsgaard <br><small class="roles"> Author, contributor </small>  </li>
+<li>Ulrich Halekoh <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0003-3679-8424" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Søren Højsgaard <br><small class="roles"> Author, contributor </small> <a href="https://orcid.org/0000-0002-3269-9552" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 

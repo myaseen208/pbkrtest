@@ -268,7 +268,7 @@ Fixed Effects from Restricted Maximum Likelihood</em>, Biometrics 53: 983-997.</
 #&gt; fmSmall  5 1785.5 1801.4 -887.74   1775.5                             
 #&gt; fmLarge  6 1763.9 1783.1 -875.97   1751.9 23.537      1  1.226e-06 ***
 #&gt; ---
-#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'><span class='fu'>KRmodcomp</span>(<span class='no'>fmLarge</span>,<span class='no'>fmSmall</span>)</div><div class='output co'>#&gt; F-test with Kenward-Roger approximation; time: 0.05 sec
+#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'><span class='fu'>KRmodcomp</span>(<span class='no'>fmLarge</span>,<span class='no'>fmSmall</span>)</div><div class='output co'>#&gt; F-test with Kenward-Roger approximation; time: 0.06 sec
 #&gt; large : Reaction ~ Days + (Days | Subject)
 #&gt; small : Reaction ~ 1 + (Days | Subject)
 #&gt;         stat    ndf    ddf F.scaling   p.value    
@@ -277,7 +277,7 @@ Fixed Effects from Restricted Maximum Likelihood</em>, Biometrics 53: 983-997.</
 #&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'>
 <span class='co'>## The same test using a restriction matrix</span>
 <span class='no'>L</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='fl'>0</span>,<span class='fl'>1</span>)
-<span class='fu'>KRmodcomp</span>(<span class='no'>fmLarge</span>, <span class='no'>L</span>)</div><div class='output co'>#&gt; F-test with Kenward-Roger approximation; time: 0.06 sec
+<span class='fu'>KRmodcomp</span>(<span class='no'>fmLarge</span>, <span class='no'>L</span>)</div><div class='output co'>#&gt; F-test with Kenward-Roger approximation; time: 0.07 sec
 #&gt; large : Reaction ~ Days + (Days | Subject)
 #&gt; small : L beta = L betaH 
 #&gt; L=

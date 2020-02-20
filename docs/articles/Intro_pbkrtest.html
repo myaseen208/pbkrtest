@@ -249,48 +249,46 @@ mean of the differences
 <a href="#parametric-bootstrap" class="anchor"></a>Parametric bootstrap</h1>
 <p>Parametric bootstrap provides an alternative but many simulations are often needed to provide credible results (also many more than shown here; in this connection it can be useful to exploit that computings can be made en parallel, see the documentation):</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>(pb.b &lt;-<span class="st"> </span><span class="kw"><a href="../reference/pb-modcomp.html">PBmodcomp</a></span>(lmm1.b, lmm0.b, <span class="dt">nsim=</span><span class="dv">500</span>, <span class="dt">cl=</span><span class="dv">2</span>) )</span></code></pre></div>
-<pre><code>Bootstrap test; time: 4.20 sec;samples: 500; extremes: 3;
-Requested samples: 500 Used samples: 499 Extremes: 3
+<pre><code>Bootstrap test; time: 4.13 sec;samples: 500; extremes: 6;
 large : wear ~ mat + (1 | boyf)
 small : wear ~ (1 | boyf)
          stat df  p.value   
 LRT    8.1197  1 0.004379 **
-PBtest 8.1197    0.008000 **
+PBtest 8.1197    0.013972 * 
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="kw"><a href="https://rdrr.io/r/base/summary.html">summary</a></span>( pb.b )</span></code></pre></div>
-<pre><code>Bootstrap test; time: 4.20 sec;samples: 500; extremes: 3;
-Requested samples: 500 Used samples: 499 Extremes: 3
+<pre><code>Bootstrap test; time: 4.13 sec;samples: 500; extremes: 6;
 large : wear ~ mat + (1 | boyf)
 small : wear ~ (1 | boyf)
            stat     df    ddf  p.value   
 LRT      8.1197 1.0000        0.004379 **
-PBtest   8.1197               0.008000 **
-Gamma    8.1197               0.007419 **
-Bartlett 7.5501 1.0000        0.006001 **
-F        8.1197 1.0000 28.511 0.008046 **
+PBtest   8.1197               0.013972 * 
+Gamma    8.1197               0.009609 **
+Bartlett 6.7891 1.0000        0.009172 **
+F        8.1197 1.0000 12.204 0.014424 * 
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <p>For the imbalanced data, the result is similar to the result from the paired <span class="math inline">\(t\)</span> test.</p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>(pb.i&lt;-<span class="kw"><a href="../reference/pb-modcomp.html">PBmodcomp</a></span>(lmm1.i, lmm0.i, <span class="dt">nsim=</span><span class="dv">500</span>, <span class="dt">cl=</span><span class="dv">2</span>))</span></code></pre></div>
-<pre><code>Bootstrap test; time: 4.30 sec;samples: 500; extremes: 26;
+<pre><code>Bootstrap test; time: 4.38 sec;samples: 500; extremes: 17;
 large : wear ~ mat + (1 | boyf)
 small : wear ~ (1 | boyf)
          stat df p.value  
 LRT    5.1151  1 0.02372 *
-PBtest 5.1151    0.05389 .
+PBtest 5.1151    0.03593 *
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="kw"><a href="https://rdrr.io/r/base/summary.html">summary</a></span>(pb.i)</span></code></pre></div>
-<pre><code>Bootstrap test; time: 4.30 sec;samples: 500; extremes: 26;
+<pre><code>Bootstrap test; time: 4.38 sec;samples: 500; extremes: 17;
 large : wear ~ mat + (1 | boyf)
 small : wear ~ (1 | boyf)
            stat     df    ddf p.value  
 LRT      5.1151 1.0000        0.02372 *
-PBtest   5.1151               0.05389 .
-Gamma    5.1151               0.04412 *
-Bartlett 4.0827 1.0000        0.04332 *
-F        5.1151 1.0000 9.9094 0.04746 *
+PBtest   5.1151               0.03593 *
+Gamma    5.1151               0.03578 *
+Bartlett 4.4722 1.0000        0.03445 *
+F        5.1151 1.0000 15.913 0.03808 *
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 
