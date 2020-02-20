@@ -23,7 +23,7 @@ navbar:
       href: reference/index.html
     - icon: fa-file-o
       text: Tutorial
-      href: articles/Intro_pbrktest.html
+      href: articles/Intro_pbkrtest.html
     - icon: fa-newspaper-o
       text: News
       href: news/index.html
