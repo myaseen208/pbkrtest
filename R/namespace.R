@@ -4,7 +4,6 @@
 #' @importFrom MASS ginv
 
 #' @importFrom magrittr "%>%"
-#' @export  "%>%"
 
 #' @importFrom parallel clusterCall clusterExport clusterSetRNGStream
 #'     mclapply detectCores makeCluster
