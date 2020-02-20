@@ -74,7 +74,7 @@ For a detailed tutorial (vignette) on how to used this package type:
 browseVignettes(package = "pbkrtest")
 ```
 
-The vignette for the latest version is also available [online](https://myaseen208.github.io/pbkrtest/articles/Intro_pbkrtest.pdf).
+The vignette for the latest version is also available [online](https://myaseen208.github.io/pbkrtest/articles/Intro_pbkrtest.html).
 
 
 ## What's new

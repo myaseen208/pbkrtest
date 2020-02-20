@@ -65,7 +65,7 @@ browseVignettes(package = "pbkrtest")
 ```
 
 The vignette for the latest version is also available
-[online](https://myaseen208.github.io/pbkrtest/articles/Intro_pbkrtest.pdf).
+[online](https://myaseen208.github.io/pbkrtest/articles/Intro_pbkrtest.html).
 
 ## What’s new
 
