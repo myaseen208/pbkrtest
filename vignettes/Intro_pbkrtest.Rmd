@@ -1,6 +1,6 @@
 ---
 title: "On the usage of the  pbkrtest package"
-author: "Soren Hojsgaard^1^ and Ulrich Halekoh^2^"
+author: "Søren Højsgaard^1^ and Ulrich Halekoh^2^"
 date: "`r Sys.Date()`"
 geometry: margin=3cm
 output:
@@ -39,6 +39,7 @@ vignette: |
   %\VignetteIndexEntry{Intro_pbkrtest}
   %\usepackage[utf8]{inputenc}
   %\VignetteEngine{knitr::rmarkdown_notangle}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, echo=FALSE}
