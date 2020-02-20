@@ -1,6 +1,6 @@
 ---
 title: "On the usage of the  pbkrtest package"
-author: "Soren Hojsgaard and Ulrich Halekoh^1^"
+author: "Soren Hojsgaard^1^ and Ulrich Halekoh^2^"
 date: "`r Sys.Date()`"
 geometry: margin=3cm
 output:
@@ -53,9 +53,15 @@ options(repos = r)
 
 ```{r, results='asis', echo=FALSE}
 switch(out_type,
-    html = {cat("<p>1. Professor of the Academic Department of Statistics and Informatics of the Faculty of Economics and Planning.National University Agraria La Molina-PERU.</p>")},
+    html = {cat("
+  <p> 1. Head of Department of Mathematical Sciences and Associate Professor of statistics at Aalborg University  (sorenh@math.aau.dk).</p>
+  
+  <p> 2. Associate Professor, Department of Public Health, University of Southern Denmark, Denmark (uhalekoh@health.sdu.dk).</p>  
+                ")},
     latex = cat("\\begin{center}
-1. Professor of the Academic Department of Statistics and Informatics of the Faculty of Economics and Planning.National University Agraria La Molina-PERU.
+1. Head of Department of Mathematical Sciences and Associate Professor of statistics at Aalborg University  (sorenh@math.aau.dk).
+
+2. Associate Professor, Department of Public Health, University of Southern Denmark, Denmark (uhalekoh@health.sdu.dk)
 
 \\end{center}" )
 )

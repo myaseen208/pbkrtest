@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Soren Hojsgaard and Ulrich Halekoh1" />
+<meta name="author" content="Soren Hojsgaard1 and Ulrich Halekoh2" />
 
 <meta name="date" content="2020-02-20" />
 
@@ -364,7 +364,7 @@ summary {
 
 
 <h1 class="title toc-ignore">On the usage of the pbkrtest package</h1>
-<h4 class="author">Soren Hojsgaard and Ulrich Halekoh<sup>1</sup></h4>
+<h4 class="author">Soren Hojsgaard<sup>1</sup> and Ulrich Halekoh<sup>2</sup></h4>
 <h4 class="date">2020-02-20</h4>
 
 </div>
@@ -380,7 +380,12 @@ summary {
 
 <p>
 <ol style="list-style-type: decimal">
-<li>Professor of the Academic Department of Statistics and Informatics of the Faculty of Economics and Planning.National University Agraria La Molina-PERU.
+<li>Head of Department of Mathematical Sciences and Associate Professor of statistics at Aalborg University (<a href="mailto:sorenh@math.aau.dk" class="email">sorenh@math.aau.dk</a>).
+</p></li>
+</ol>
+<p>
+<ol start="2" style="list-style-type: decimal">
+<li>Associate Professor, Department of Public Health, University of Southern Denmark, Denmark (<a href="mailto:uhalekoh@health.sdu.dk" class="email">uhalekoh@health.sdu.dk</a>).
 </p></li>
 </ol>
 
@@ -463,7 +468,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 <h1><span class="header-section-number">2</span> Kenward–Roger approach</h1>
 <p>The Kenward–Roger approximation is exact for the balanced data in the sense that it produces the same result as the paired <span class="math inline">\(t\)</span>–test.</p>
 <pre class="r"><code>( kr.b&lt;-KRmodcomp(lmm1.b, lmm0.b) )</code></pre>
-<pre><code>F-test with Kenward-Roger approximation; time: 0.03 sec
+<pre><code>F-test with Kenward-Roger approximation; computing time: 0.16 sec.
 large : wear ~ mat + (1 | boyf)
 small : wear ~ (1 | boyf)
         stat    ndf    ddf F.scaling  p.value   
@@ -471,7 +476,7 @@ Ftest 11.215  1.000  9.000         1 0.008539 **
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <pre class="r"><code>summary(kr.b)</code></pre>
-<pre><code>F-test with Kenward-Roger approximation; time: 0.03 sec
+<pre><code>F-test with Kenward-Roger approximation; computing time: 0.16 sec.
 large : wear ~ mat + (1 | boyf)
 small : wear ~ (1 | boyf)
          stat    ndf    ddf F.scaling  p.value   
@@ -484,7 +489,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 <pre><code>[1] 9</code></pre>
 <p>For the imbalanced data we get</p>
 <pre class="r"><code>(kr.i&lt;-KRmodcomp(lmm1.i, lmm0.i))</code></pre>
-<pre><code>F-test with Kenward-Roger approximation; time: 0.05 sec
+<pre><code>F-test with Kenward-Roger approximation; computing time: 0.04 sec.
 large : wear ~ mat + (1 | boyf)
 small : wear ~ (1 | boyf)
         stat    ndf    ddf F.scaling p.value  
@@ -510,46 +515,64 @@ mean of the differences
 <h1><span class="header-section-number">3</span> Parametric bootstrap</h1>
 <p>Parametric bootstrap provides an alternative but many simulations are often needed to provide credible results (also many more than shown here; in this connection it can be useful to exploit that computings can be made en parallel, see the documentation):</p>
 <pre class="r"><code>(pb.b &lt;- PBmodcomp(lmm1.b, lmm0.b, nsim=500, cl=2) )</code></pre>
-<pre><code>Bootstrap test; time: 4.27 sec;samples: 500; extremes: 4;
+<pre><code>Warning in checkConv(attr(opt, &quot;derivs&quot;), opt$par, ctrl = control$checkConv, :
+Model failed to converge with max|grad| = 0.00299005 (tol = 0.002, component 1)</code></pre>
+<pre><code>Warning in checkConv(attr(opt, &quot;derivs&quot;), opt$par, ctrl = control$checkConv, :
+Model failed to converge with max|grad| = 0.00219456 (tol = 0.002, component 1)</code></pre>
+<pre><code>Warning in checkConv(attr(opt, &quot;derivs&quot;), opt$par, ctrl = control$checkConv, :
+Model failed to converge with max|grad| = 0.00299267 (tol = 0.002, component 1)</code></pre>
+<pre><code>Warning in checkConv(attr(opt, &quot;derivs&quot;), opt$par, ctrl = control$checkConv, :
+Model failed to converge with max|grad| = 0.00344187 (tol = 0.002, component 1)</code></pre>
+<pre><code>Warning in checkConv(attr(opt, &quot;derivs&quot;), opt$par, ctrl = control$checkConv, :
+Model failed to converge with max|grad| = 0.00310246 (tol = 0.002, component 1)</code></pre>
+<pre><code>Warning in checkConv(attr(opt, &quot;derivs&quot;), opt$par, ctrl = control$checkConv, :
+Model failed to converge with max|grad| = 0.0033992 (tol = 0.002, component 1)</code></pre>
+<pre><code>Warning in checkConv(attr(opt, &quot;derivs&quot;), opt$par, ctrl = control$checkConv, :
+Model failed to converge with max|grad| = 0.0022284 (tol = 0.002, component 1)</code></pre>
+<pre><code>Parametric bootstrap test; time: 7.66 sec; samples: 500 extremes: 6;
 large : wear ~ mat + (1 | boyf)
 small : wear ~ (1 | boyf)
          stat df  p.value   
 LRT    8.1197  1 0.004379 **
-PBtest 8.1197    0.009980 **
+PBtest 8.1197    0.013972 * 
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <pre class="r"><code>summary( pb.b )</code></pre>
-<pre><code>Bootstrap test; time: 4.27 sec;samples: 500; extremes: 4;
+<pre><code>Parametric bootstrap test; time: 7.66 sec; samples: 500 extremes: 6;
 large : wear ~ mat + (1 | boyf)
 small : wear ~ (1 | boyf)
            stat     df    ddf  p.value   
+PBtest   8.1197               0.013972 * 
+Gamma    8.1197               0.009183 **
+Bartlett 7.3096 1.0000        0.006859 **
+F        8.1197 1.0000 20.045 0.009893 **
 LRT      8.1197 1.0000        0.004379 **
-PBtest   8.1197               0.009980 **
-Gamma    8.1197               0.008168 **
-Bartlett 6.7478 1.0000        0.009386 **
-F        8.1197 1.0000 11.837 0.014811 * 
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <p>For the imbalanced data, the result is similar to the result from the paired <span class="math inline">\(t\)</span> test.</p>
 <pre class="r"><code>(pb.i&lt;-PBmodcomp(lmm1.i, lmm0.i, nsim=500, cl=2))</code></pre>
-<pre><code>Bootstrap test; time: 4.43 sec;samples: 500; extremes: 26;
+<pre><code>Warning in checkConv(attr(opt, &quot;derivs&quot;), opt$par, ctrl = control$checkConv, :
+Model failed to converge with max|grad| = 0.00252534 (tol = 0.002, component 1)</code></pre>
+<pre><code>Warning in checkConv(attr(opt, &quot;derivs&quot;), opt$par, ctrl = control$checkConv, :
+Model failed to converge with max|grad| = 0.00293157 (tol = 0.002, component 1)</code></pre>
+<pre><code>Parametric bootstrap test; time: 7.42 sec; samples: 500 extremes: 13;
 large : wear ~ mat + (1 | boyf)
 small : wear ~ (1 | boyf)
          stat df p.value  
 LRT    5.1151  1 0.02372 *
-PBtest 5.1151    0.05389 .
+PBtest 5.1151    0.02794 *
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <pre class="r"><code>summary(pb.i)</code></pre>
-<pre><code>Bootstrap test; time: 4.43 sec;samples: 500; extremes: 26;
+<pre><code>Parametric bootstrap test; time: 7.42 sec; samples: 500 extremes: 13;
 large : wear ~ mat + (1 | boyf)
 small : wear ~ (1 | boyf)
            stat     df    ddf p.value  
+PBtest   5.1151               0.02794 *
+Gamma    5.1151               0.03486 *
+Bartlett 4.5650 1.0000        0.03263 *
+F        5.1151 1.0000 18.596 0.03591 *
 LRT      5.1151 1.0000        0.02372 *
-PBtest   5.1151               0.05389 .
-Gamma    5.1151               0.04499 *
-Bartlett 3.9488 1.0000        0.04691 *
-F        5.1151 1.0000 8.7712 0.05078 .
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 
